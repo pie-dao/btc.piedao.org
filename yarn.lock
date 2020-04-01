@@ -908,8 +908,8 @@
 "@pie-dao/blockchain@file:../blockchain":
   version "1.0.0"
   dependencies:
-    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-57e9f42b-fd57-4457-90b9-d63b95e032a2-1585669302118/node_modules/@pie-dao/abis"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-57e9f42b-fd57-4457-90b9-d63b95e032a2-1585669302118/node_modules/@pie-dao/utils"
+    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6421d585-74fd-4f91-80f7-ba438597232e-1585775545459/node_modules/@pie-dao/abis"
+    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6421d585-74fd-4f91-80f7-ba438597232e-1585775545459/node_modules/@pie-dao/utils"
     bignumber.js "^9.0.0"
     bnc-sdk "^1.1.0"
     ethers "^4.0.46"
@@ -928,10 +928,11 @@
 "@pie-dao/eth@file:../eth":
   version "1.0.0"
   dependencies:
-    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-37361339-f16c-43a5-9357-7d5a1f670bae-1585669302184/node_modules/@pie-dao/abis"
+    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-54e8c721-05ca-4dad-9a5e-ff7eb89b7854-1585775545549/node_modules/@pie-dao/abis"
     "@pie-dao/eth-tailwind" "1.0.0"
     "@pie-dao/if-unless" "^1.0.1"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-37361339-f16c-43a5-9357-7d5a1f670bae-1585669302184/node_modules/@pie-dao/utils"
+    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-54e8c721-05ca-4dad-9a5e-ff7eb89b7854-1585775545549/node_modules/@pie-dao/utils"
+    "@risingstack/react-easy-state" "^6.2.0"
     bignumber.js "^9.0.0"
     bnc-notify "^1.1.0"
     eth-provider "^0.2.5"
@@ -942,7 +943,6 @@
     pubsub-js "^1.8.0"
     react "^16.13.0"
     react-dom "^16.13.0"
-    react-easy-state "^6.1.3"
     simpleid-js-sdk "^1.1.0"
     styled-components "^5.0.1"
     tailwindcss "^1.2.0"
@@ -957,24 +957,26 @@
     react-dom "^16.13.0"
     react-easy-state "^6.1.3"
 
+"@pie-dao/mint-tailwind@file:../mint-tailwind":
+  version "1.0.0"
+  dependencies:
+    tailwindcss "^1.2.0"
+
 "@pie-dao/mint@file:../mint":
   version "1.0.0"
   dependencies:
-    "@pie-dao/blockchain" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-daf074e6-3b19-4afd-aa39-5c66a91fe82b-1585669302233/node_modules/@pie-dao/blockchain"
-    "@pie-dao/eth" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-daf074e6-3b19-4afd-aa39-5c66a91fe82b-1585669302233/node_modules/@pie-dao/eth"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-daf074e6-3b19-4afd-aa39-5c66a91fe82b-1585669302233/node_modules/@pie-dao/utils"
+    "@pie-dao/blockchain" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/blockchain"
+    "@pie-dao/eth" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/eth"
+    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/utils"
     bignumber.js "^9.0.0"
     prop-types "^15.7.2"
     rc-slider "^9.2.4"
     react "^16.13.0"
     react-dom "^16.13.0"
-    react-easy-state "^6.1.3"
     recharts "^1.8.5"
 
-"@pie-dao/tailwind@^1.1.1":
+"@pie-dao/tailwind@file:../tailwind":
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@pie-dao/tailwind/-/tailwind-1.1.1.tgz#6f7fd24327b0507ee1e5f9566f8d1807d473dbb6"
-  integrity sha512-OYdGncpGVWcqMV5SmN7R0rsenuOhWGsFEPMyqz+mLyVKxUbQnL0pmaZdMudJwNg+DMcwuXbRDlkMSKxHaYI7Qw==
   dependencies:
     bignumber.js "^9.0.0"
     tailwindcss "^1.2.0"
@@ -987,6 +989,13 @@
     is-plain-object "^3.0.0"
     promise.allsettled "^1.0.2"
     regenerator-runtime "^0.13.5"
+
+"@risingstack/react-easy-state@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@risingstack/react-easy-state/-/react-easy-state-6.2.0.tgz#afdda8c26b1672cb87b7f17ba3fc67165e3a2735"
+  integrity sha512-LCLd+1LPpYIie4ivZIoPIDotb0hUVYLroS7bUcyaUihTbgAGs8vc/4qaXSb51JnM0D2ugr9Cfe5+vq8TXnUf3w==
+  dependencies:
+    "@nx-js/observer-util" "^4.2.2"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

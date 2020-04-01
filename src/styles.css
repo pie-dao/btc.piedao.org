@@ -151,7 +151,12 @@
   .footer-container .right {
     flex-direction: column;
   }
+}
 
+/* Landing */
+
+.landing-container, .liquidity-container {
+  @apply content text-center flex-col font-normal;
 }
 
 /* purgecss end ignore */

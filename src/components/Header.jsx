@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ConnectButton } from '@pie-dao/eth';
 import { Link } from 'react-router-dom';
-import { store, view } from 'react-easy-state';
+import { store, view } from '@risingstack/react-easy-state';
 
 const headerStore = store({
   toggle: () => {

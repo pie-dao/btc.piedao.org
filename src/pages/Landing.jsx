@@ -1,15 +1,29 @@
 /* eslint arrow-body-style: 0 */
 
 import React from 'react';
-import { view } from 'react-easy-state';
+import { eth } from '@pie-dao/eth';
+import { If } from '@pie-dao/if-unless';
+import { store, view } from '@risingstack/react-easy-state';
+
+const state = store({
+  account: undefined,
+});
+
+eth.on('accountChanged', (message, { account }) => {
+  state.account = account;
+});
 
 const Landing = () => {
+  const { account } = state;
+
   return (
-    <div className="content text-center flex-col font-normal">
+    <div className="landing-container">
       <span>
-        Welcome to the PieDAO Frontend Template. View the&nbsp;
-        <a href="https://docs.piedao.org/development-resources/frontend-template">docs</a>
-        &nbsp;to find out more.
+        Welcome to PieDAO. Something is coming soon...
+        <If condition={!!account}>
+          <br />
+          <a href="/liquidity">Liquidity</a>
+        </If>
       </span>
     </div>
   );
