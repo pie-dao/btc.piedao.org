@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { ConnectModal } from '@pie-dao/eth';
 import { createBrowserHistory } from 'history';
 import { view } from '@risingstack/react-easy-state';

@@ -1,6 +1,6 @@
 {
   "name": "btc.piedao.org",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "main": "src/index.jsx",
   "homepage": "./",
@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@pie-dao/abis": "^1.0.0",
-    "@pie-dao/blockchain": "file:../blockchain",
+    "@pie-dao/blockchain": "^1.0.0",
     "@pie-dao/eth": "^1.0.3",
     "@pie-dao/eth-tailwind": "^1.0.0",
     "@pie-dao/if-unless": "^1.0.1",

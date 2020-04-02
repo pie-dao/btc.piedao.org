@@ -907,8 +907,10 @@
   resolved "https://registry.yarnpkg.com/@pie-dao/abis/-/abis-1.0.0.tgz#94eef3dc0459df79ff62734c0a60e0b83d23ea82"
   integrity sha512-1dNnCHcClxwwWo8U/f3Yt508vFK1THECFRgDRjRo9CEjph/equk52skLlliJmIXCTUfs4OtYGWENX/6j+LXePA==
 
-"@pie-dao/blockchain@^1.0.0", "@pie-dao/blockchain@file:../blockchain":
+"@pie-dao/blockchain@^1.0.0":
   version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pie-dao/blockchain/-/blockchain-1.0.0.tgz#9fe64319b71aa88c8b1e9bc67dff1e3be479e2ad"
+  integrity sha512-PCIQC0DPNTREQ+RIvQHQaetofJnV3QuuKELjjgRgJ5N8MkJ+TP72i0A797uZurlB4Hutp6YRQkXm6VUMRhaxbg==
   dependencies:
     "@pie-dao/abis" "^1.0.0"
     "@pie-dao/utils" "^1.0.0"
