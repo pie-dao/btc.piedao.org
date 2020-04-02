@@ -14,11 +14,13 @@ const blocknativeDappId = '523b279d-0fe0-42e8-8977-e688c3686e57';
 const simpleIdAppId = '76c97a89-5ff2-4730-beac-3320eed25ded';
 
 const database = new BlockchainDatabase({ blocknativeDappId });
+const decimalPlaces = 6;
 
 const { approve } = eth;
 
-const submit = (...args) => {
-  console.log('submit', ...args); // TODO: Hook this up to the actual function
+const submit = () => {
+  const amount = BigNumber(mint.slider).dividedBy(10 ** decimalPlaces);
+  console.log('submit', amount.toString()); // TODO: Hook this up to the actual function
 };
 
 // TODO: hook this up properly
@@ -72,16 +74,27 @@ eth.on('accountChanged', (message, { account }) => {
       submit,
       tokens,
     });
+  } else {
+    // TODO: make this unnecessary
+    window.location.reload();
   }
 });
 
 eth.init({ blocknativeDappId, simpleIdAppId });
+
+const config = {
+  mint: {
+    decimalPlaces,
+    step: 0.000001,
+  },
+};
 
 const images = {
   logo: './assets/logo.png',
 };
 
 const props = {
+  config,
   database,
   images,
 };
