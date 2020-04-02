@@ -902,14 +902,14 @@
   resolved "https://registry.yarnpkg.com/@nx-js/observer-util/-/observer-util-4.2.2.tgz#faea1bc61936653486d1b5dec7485220991e628d"
   integrity sha512-9OayX1xkdGjdnsDiO2YdaYJ6aMyCF7/NY4QWVgIgjSAZJ4OX2fD766Ts79hEzBscenQy2DCaSoY8VkguIMB1ZA==
 
-"@pie-dao/abis@file:../abis":
+"@pie-dao/abis@^1.0.0", "@pie-dao/abis@file:../abis":
   version "1.0.0"
 
 "@pie-dao/blockchain@file:../blockchain":
   version "1.0.0"
   dependencies:
-    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6421d585-74fd-4f91-80f7-ba438597232e-1585775545459/node_modules/@pie-dao/abis"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6421d585-74fd-4f91-80f7-ba438597232e-1585775545459/node_modules/@pie-dao/utils"
+    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6b964837-b812-46e2-a9d2-c2dbb5c19df2-1585821811088/node_modules/@pie-dao/abis"
+    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-blockchain-1.0.0-6b964837-b812-46e2-a9d2-c2dbb5c19df2-1585821811088/node_modules/@pie-dao/utils"
     bignumber.js "^9.0.0"
     bnc-sdk "^1.1.0"
     ethers "^4.0.46"
@@ -925,13 +925,37 @@
   dependencies:
     tailwindcss "^1.2.0"
 
-"@pie-dao/eth@file:../eth":
-  version "1.0.0"
+"@pie-dao/eth@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@pie-dao/eth/-/eth-1.0.2.tgz#69543949394f1d71ecb5ff24a59dbf34254906ca"
+  integrity sha512-+TLwJjouWcG7feUBFirgR8xk9s1c2UBVoF2PqjF9yniH7BfKlN8p19vYWPckKaqYaHub7n85+CanVQPdhWGkKA==
   dependencies:
-    "@pie-dao/abis" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-54e8c721-05ca-4dad-9a5e-ff7eb89b7854-1585775545549/node_modules/@pie-dao/abis"
+    "@pie-dao/abis" "^1.0.0"
     "@pie-dao/eth-tailwind" "1.0.0"
     "@pie-dao/if-unless" "^1.0.1"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-eth-1.0.0-54e8c721-05ca-4dad-9a5e-ff7eb89b7854-1585775545549/node_modules/@pie-dao/utils"
+    "@pie-dao/utils" "^1.0.0"
+    "@risingstack/react-easy-state" "^6.2.0"
+    bignumber.js "^9.0.0"
+    bnc-notify "^1.1.0"
+    eth-provider "^0.2.5"
+    ethers "^4.0.45"
+    jazzicon "^1.5.0"
+    minimal-react-modal "^1.0.2"
+    prop-types "^15.7.2"
+    pubsub-js "^1.8.0"
+    react "^16.13.0"
+    react-dom "^16.13.0"
+    simpleid-js-sdk "^1.1.0"
+    styled-components "^5.0.1"
+    tailwindcss "^1.2.0"
+
+"@pie-dao/eth@file:../eth":
+  version "1.0.2"
+  dependencies:
+    "@pie-dao/abis" "^1.0.0"
+    "@pie-dao/eth-tailwind" "1.0.0"
+    "@pie-dao/if-unless" "^1.0.1"
+    "@pie-dao/utils" "^1.0.0"
     "@risingstack/react-easy-state" "^6.2.0"
     bignumber.js "^9.0.0"
     bnc-notify "^1.1.0"
@@ -965,9 +989,10 @@
 "@pie-dao/mint@file:../mint":
   version "1.0.0"
   dependencies:
-    "@pie-dao/blockchain" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/blockchain"
-    "@pie-dao/eth" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/eth"
-    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-58654ba4-cb57-4bdc-bb61-dba33e6706a9-1585775545727/node_modules/@pie-dao/utils"
+    "@pie-dao/blockchain" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-4355db82-8882-408e-9539-f21bcf976d8b-1585821811335/node_modules/@pie-dao/blockchain"
+    "@pie-dao/eth" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-4355db82-8882-408e-9539-f21bcf976d8b-1585821811335/node_modules/@pie-dao/eth"
+    "@pie-dao/utils" "file:../../.cache/yarn/v4/npm-@pie-dao-mint-1.0.0-4355db82-8882-408e-9539-f21bcf976d8b-1585821811335/node_modules/@pie-dao/utils"
+    "@risingstack/react-easy-state" "^6.2.0"
     bignumber.js "^9.0.0"
     prop-types "^15.7.2"
     rc-slider "^9.2.4"
@@ -975,11 +1000,24 @@
     react-dom "^16.13.0"
     recharts "^1.8.5"
 
-"@pie-dao/tailwind@file:../tailwind":
-  version "1.1.1"
+"@pie-dao/tailwind@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@pie-dao/tailwind/-/tailwind-1.1.2.tgz#bb9ba9fa0fa7ba321cd792b079f7e912e77056c7"
+  integrity sha512-tkylQA0d9HUTNeu9FwZxKIY9BAcN+fENHkVaDpDQ/ZKxoriphpQ9BcWrQNomeuJX1+erhmZB+toUb+9TzG8prQ==
   dependencies:
     bignumber.js "^9.0.0"
     tailwindcss "^1.2.0"
+
+"@pie-dao/utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pie-dao/utils/-/utils-1.0.0.tgz#c504c080c5f3a8b0fba0e8d12d0881421ec2cec4"
+  integrity sha512-wMnSjtB/nSVRz5q7zWFqZnz9lKbm1T7F2ug+muhusioTBiGWGBYex31RmeJVetxQl2scsfo087hmPoliFCMQVw==
+  dependencies:
+    bignumber.js "^9.0.0"
+    ethers "^4.0.46"
+    is-plain-object "^3.0.0"
+    promise.allsettled "^1.0.2"
+    regenerator-runtime "^0.13.5"
 
 "@pie-dao/utils@file:../utils":
   version "1.0.0"
