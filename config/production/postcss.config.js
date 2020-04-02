@@ -7,7 +7,7 @@ module.exports = {
     require('autoprefixer'),
     purgecss({
       content: ['./**/*.html', './**/*.jsx'],
-      whitelistPatterns: [/container/],
+      whitelistPatterns: [/container/, /rc-slider/],
     })
   ],
 };
