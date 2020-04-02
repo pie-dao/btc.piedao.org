@@ -159,4 +159,10 @@
   @apply content text-center flex-col font-normal;
 }
 
+/* PoolBalance */
+
+.pool-balance-container h1 {
+  @apply text-xl font-bolder;
+}
+
 /* purgecss end ignore */
