@@ -22,7 +22,7 @@ const Landing = () => {
         Welcome to PieDAO. Something is coming soon...
         <If condition={!!account}>
           <br />
-          <a href="/#/liquidity">Liquidity</a>
+          <a href="#/liquidity">Liquidity</a>
         </If>
       </span>
     </div>
