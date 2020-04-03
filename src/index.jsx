@@ -111,7 +111,9 @@ eth.on('accountChanged', async (message, { account }) => {
   }
 });
 
-eth.init({ blocknativeDappId, simpleIdAppId });
+window.document.addEventListener('DOMContentLoaded', () => {
+  eth.init({ blocknativeDappId, simpleIdAppId });
+});
 
 const config = {
   mint: {
