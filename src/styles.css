@@ -165,4 +165,22 @@
   @apply text-xl font-bolder;
 }
 
+/* Mint */
+
+.mint-container .right .column .normal {
+  @apply border-label-pink border-half text-label-pink rounded-4px m-12px p-12px font-normal;
+}
+
+.mint-container .right .column .normal h1, .mint-container .right .column .normal p:nth-child(4) {
+  @apply font-bolder;
+}
+
+.mint-container .right .column .normal p {
+  @apply pt-8px;
+}
+
+.mint-container .right .column .title {
+  @apply pl-12px;
+}
+
 /* purgecss end ignore */

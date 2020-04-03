@@ -902,12 +902,12 @@
   resolved "https://registry.yarnpkg.com/@nx-js/observer-util/-/observer-util-4.2.2.tgz#faea1bc61936653486d1b5dec7485220991e628d"
   integrity sha512-9OayX1xkdGjdnsDiO2YdaYJ6aMyCF7/NY4QWVgIgjSAZJ4OX2fD766Ts79hEzBscenQy2DCaSoY8VkguIMB1ZA==
 
-"@pie-dao/abis@^1.0.0":
+"@pie-dao/abis@1.0.0", "@pie-dao/abis@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@pie-dao/abis/-/abis-1.0.0.tgz#94eef3dc0459df79ff62734c0a60e0b83d23ea82"
   integrity sha512-1dNnCHcClxwwWo8U/f3Yt508vFK1THECFRgDRjRo9CEjph/equk52skLlliJmIXCTUfs4OtYGWENX/6j+LXePA==
 
-"@pie-dao/blockchain@^1.0.0":
+"@pie-dao/blockchain@1.0.0", "@pie-dao/blockchain@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@pie-dao/blockchain/-/blockchain-1.0.0.tgz#9fe64319b71aa88c8b1e9bc67dff1e3be479e2ad"
   integrity sha512-PCIQC0DPNTREQ+RIvQHQaetofJnV3QuuKELjjgRgJ5N8MkJ+TP72i0A797uZurlB4Hutp6YRQkXm6VUMRhaxbg==
@@ -922,17 +922,17 @@
     pubsub-js "^1.8.0"
     regenerator-runtime "^0.13.5"
 
-"@pie-dao/eth-tailwind@1.0.0", "@pie-dao/eth-tailwind@^1.0.0":
+"@pie-dao/eth-tailwind@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@pie-dao/eth-tailwind/-/eth-tailwind-1.0.0.tgz#a5be18dd45424f53e17fc40f43cfc6d5030f57b8"
   integrity sha512-kj2ZaJrOFXxYR+gdkzk5O05fDCXEkMCcSGu9unu0EFU2lGiDjEDqbBCzH/NS5efGnL8SXvOzHRnxp1RHeMXsiA==
   dependencies:
     tailwindcss "^1.2.0"
 
-"@pie-dao/eth@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@pie-dao/eth/-/eth-1.0.3.tgz#ee5744d738af0a400a1c3b43e09e5a2785a818f7"
-  integrity sha512-BbU2EEJvMxAyhoKIKocc63aL4H0/WR+qBuXdRav1EbKiEpN++LJFot7VxEUq3F3U2PhtGX2yn060LmaDG9fwHw==
+"@pie-dao/eth@1.1.0", "@pie-dao/eth@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pie-dao/eth/-/eth-1.1.0.tgz#51be5689da406ad837f002fd551ffd4f914bebfe"
+  integrity sha512-CRWTTKoQQBel8xWK/4hRAuhKOM+wR9ZNhX3xrKSlQ4mpCD0PfjFNWDvdWUVfZ63KG5Q5PJHFJHVAhCpUfSnyAw==
   dependencies:
     "@pie-dao/abis" "^1.0.0"
     "@pie-dao/eth-tailwind" "1.0.0"
@@ -953,7 +953,7 @@
     styled-components "^5.0.1"
     tailwindcss "^1.2.0"
 
-"@pie-dao/if-unless@^1.0.1":
+"@pie-dao/if-unless@1.0.1", "@pie-dao/if-unless@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@pie-dao/if-unless/-/if-unless-1.0.1.tgz#2edc134cca8b9d742d91a9e6560197ff602c751b"
   integrity sha512-EROummrXaHrxBxqvge/iyRcPXghGvQgo3TTlwMk5pSq2zDFKj/joqjLmN5jh8sLgegXS2rIUg4RzkzyqkvAxHw==
@@ -963,21 +963,21 @@
     react-dom "^16.13.0"
     react-easy-state "^6.1.3"
 
-"@pie-dao/mint-tailwind@^1.0.0":
+"@pie-dao/mint-tailwind@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@pie-dao/mint-tailwind/-/mint-tailwind-1.0.0.tgz#3b1292a6c62c7ae9e139fe8406bff3af43c09abd"
   integrity sha512-dzURDQWOZnoUubImxUPsAMLjePBaT8t9bifSf1dawk4jdLC4P+4g3fGGt9FaGHky8kxnV3R7G8QCQVt2Gp5dWA==
   dependencies:
     tailwindcss "^1.2.0"
 
-"@pie-dao/mint@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pie-dao/mint/-/mint-1.0.0.tgz#b8e270d9989b5dc4fa9ba6804a3d746953819481"
-  integrity sha512-gyMXmZRGgh53NZvYSgj8QQkTpp9odUb4vDc8xh1G5NbuZIrSWUh2jz08iexxFx6zBUkjLvjqYhms6A1rlSi3vA==
+"@pie-dao/mint@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@pie-dao/mint/-/mint-1.0.2.tgz#ef34f82426c42ff1750ef75ea3f7cf0bdf01493d"
+  integrity sha512-RNcE9sIyPlHCdS3BGLoXzgHcDixkmQ2nkw37pKgzCuXHBmogX9JfPicu69gYtmxek3gdPnNZPYyzklYTnFWtAQ==
   dependencies:
     "@pie-dao/blockchain" "^1.0.0"
-    "@pie-dao/eth" "^1.0.3"
-    "@pie-dao/utils" "1.0.0"
+    "@pie-dao/eth" "^1.1.0"
+    "@pie-dao/utils" "^1.0.0"
     "@risingstack/react-easy-state" "^6.2.0"
     bignumber.js "^9.0.0"
     prop-types "^15.7.2"
@@ -986,7 +986,7 @@
     react-dom "^16.13.0"
     recharts "^1.8.5"
 
-"@pie-dao/tailwind@^1.1.2":
+"@pie-dao/tailwind@1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@pie-dao/tailwind/-/tailwind-1.1.2.tgz#bb9ba9fa0fa7ba321cd792b079f7e912e77056c7"
   integrity sha512-tkylQA0d9HUTNeu9FwZxKIY9BAcN+fENHkVaDpDQ/ZKxoriphpQ9BcWrQNomeuJX1+erhmZB+toUb+9TzG8prQ==
@@ -1037,9 +1037,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "13.9.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.8.tgz#09976420fc80a7a00bf40680c63815ed8c7616f4"
-  integrity sha512-1WgO8hsyHynlx7nhP1kr0OFzsgKz5XDQL+Lfc3b1Q3qIln/n8cKD4m09NJ0+P1Rq7Zgnc7N0+SsMnoD1rEb0kA==
+  version "13.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.11.0.tgz#390ea202539c61c8fa6ba4428b57e05bc36dc47b"
+  integrity sha512-uM4mnmsIIPK/yeO+42F2RQhGUIs39K2RFmugcJANppXe6J1nvH87PvzPZYpza7Xhhs8Yn9yIAVdLZ84z61+0xQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -2856,9 +2856,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.390:
-  version "1.3.393"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.393.tgz#d13fa4cbf5065e18451c84465d22aef6aca9a911"
-  integrity sha512-Ko3/VdhZAaMaJBLBFqEJ+M1qMiBI8sJfPY/hSJvDrkB3Do8LJsL9tmXy4w7o9nPXif/jFaZGSlXTQWU8XVsYtg==
+  version "1.3.395"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.395.tgz#2c531a0477bcc41deb440877d1f27509ed286aed"
+  integrity sha512-kdn2cX6hZXDdz/O2Q8tZscITlsSv1a/7bOq/fQs7QAJ9iaRlnhZPccarNhxZv1tXgmgwCnKp/1lJNYLOG8Dxiw==
 
 elliptic@6.5.2, elliptic@^6.0.0:
   version "6.5.2"
@@ -3050,15 +3050,15 @@ eslint-import-resolver-node@^0.3.2:
     resolve "^1.13.1"
 
 eslint-loader@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-3.0.3.tgz#e018e3d2722381d982b1201adb56819c73b480ca"
-  integrity sha512-+YRqB95PnNvxNp1HEjQmvf9KNvCin5HXYYseOXVC2U0KEcw4IkQ2IQEBG46j7+gW39bMzeu0GsUhVbBY3Votpw==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-3.0.4.tgz#4329482877e381c91460a055bcd08d3855b9922d"
+  integrity sha512-I496aBd+Hi23Y0Cx+sKvw+VwlJre4ScIRlkrvTO6Scq68X/UXbN6F3lAhN8b0Zv8atAyprkyrA42K5QBJtCyaw==
   dependencies:
     fs-extra "^8.1.0"
-    loader-fs-cache "^1.0.2"
+    loader-fs-cache "^1.0.3"
     loader-utils "^1.2.3"
-    object-hash "^2.0.1"
-    schema-utils "^2.6.1"
+    object-hash "^2.0.3"
+    schema-utils "^2.6.5"
 
 eslint-module-utils@^2.4.1:
   version "2.6.0"
@@ -4847,7 +4847,7 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
-loader-fs-cache@^1.0.2:
+loader-fs-cache@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.3.tgz#f08657646d607078be2f0a032f8bd69dd6f277d9"
   integrity sha512-ldcgZpjNJj71n+2Mf6yetz+c9bM4xpKtNds4LbqXzU/PTdeAX0g3ytnU1AJMEcTk2Lex4Smpe3Q/eCTsvUBxbA==
@@ -5427,7 +5427,7 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-hash@^2.0.1:
+object-hash@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.0.3.tgz#d12db044e03cd2ca3d77c0570d87225b02e1e6ea"
   integrity sha512-JPKn0GMu+Fa3zt3Bmr66JhokJU5BaNBIh4ZeTlaCBzrBsOeXzwcKKAK1tbLiPKgvwmPXsDvvLHoWh5Bm7ofIYg==
@@ -6796,9 +6796,9 @@ run-queue@^1.0.0, run-queue@^1.0.3:
     aproba "^1.1.1"
 
 rxjs@^6.5.3:
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
-  integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
+  integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
   dependencies:
     tslib "^1.9.0"
 
@@ -6841,7 +6841,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.6.0, schema-utils@^2.6.1, schema-utils@^2.6.4, schema-utils@^2.6.5:
+schema-utils@^2.6.0, schema-utils@^2.6.4, schema-utils@^2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.5.tgz#c758f0a7e624263073d396e29cd40aa101152d8a"
   integrity sha512-5KXuwKziQrTVHh8j/Uxz+QUbxkaLW9X/86NBlx/gnKgtsZA2GIVMUn17qWhRFwF8jdYb3Dig5hRO/W5mZqy6SQ==

@@ -124,11 +124,25 @@ const images = {
   logo: './assets/logo.png',
 };
 
+const text = {
+  mint: {
+    descriptor: 'Liquidity',
+    chartHeader: 'Allocation',
+    liquidityText:
+      '<h1>WARNING! - BETA PRODUCT!</h1>'
+      + '<p>BTC++ has not yet been audited. Balancer Pools are newly launched.</p>'
+      + '<p>DeFi products, and this product in particular are risky.</p>'
+      + '<p>Use at your own risk.</p>',
+    verb: 'Add',
+  },
+};
+
 const props = {
   config,
   database,
   images,
   pool,
+  text,
 };
 
 window.database = database;
