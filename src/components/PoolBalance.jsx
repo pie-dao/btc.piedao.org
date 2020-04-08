@@ -6,27 +6,29 @@ import { BlockchainDatabase } from '@pie-dao/blockchain';
 import { eth } from '@pie-dao/eth';
 import { store, view } from '@risingstack/react-easy-state';
 
+import { controllerAddress } from '../setup/tokens';
+
 const poolBalance = store({
   account: '',
   address: '',
   balance: BigNumber(0),
   symbol: '',
 
-  init: async ({ account, address, database }) => {
+  init: async ({ account, database }) => {
     if (poolBalance.address) {
       return;
     }
 
-    const { symbol } = await database.contract(address);
+    const { symbol } = await database.contract(controllerAddress);
 
-    poolBalance.address = address;
+    poolBalance.address = controllerAddress;
     poolBalance.symbol = symbol;
 
-    database.subscribe(`${account}.${address}.balance`, (message, { balance }) => {
+    database.subscribe(`${account}.${controllerAddress}.balance`, (message, { balance }) => {
       poolBalance.balance = balance;
     });
 
-    database.balance({ address: account, token: address });
+    database.balance({ address: account, token: controllerAddress });
   },
 });
 
@@ -35,14 +37,14 @@ eth.on('accountChanged', (message, { account }) => {
   poolBalance.account = account;
 });
 
-const PoolBalance = ({ database, pool }) => {
+const PoolBalance = ({ database }) => {
   const { account, balance, symbol } = poolBalance;
 
   if (!account) {
     return '';
   }
 
-  poolBalance.init({ account, database, address: pool });
+  poolBalance.init({ account, database });
 
   if (balance.isZero()) {
     return '';
@@ -63,7 +65,6 @@ const PoolBalance = ({ database, pool }) => {
 
 PoolBalance.propTypes = {
   database: PropTypes.instanceOf(BlockchainDatabase).isRequired,
-  pool: PropTypes.string.isRequired,
 };
 
 export default view(PoolBalance);
