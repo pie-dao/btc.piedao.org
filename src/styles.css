@@ -156,7 +156,7 @@
 /* Landing */
 
 .landing-container, .liquidity-container {
-  @apply content text-center flex-col font-normal;
+  @apply text-center flex-col font-normal;
 }
 
 /* PoolBalance */
@@ -181,6 +181,125 @@
 
 .mint-container .right .column .title {
   @apply pl-12px;
+}
+
+/* Hero */
+
+.hero-container {
+  @apply flex flex-col justify-center items-center content-center text-center pt-0 pr-0 pb-10px;
+  @apply pl-0 font-secondary break-words;
+}
+
+.hero-container .content {
+  @apply flex-col;
+}
+
+.hero-container img {
+  @apply mb-30px -mt-30px;
+}
+
+.hero-container .subtitle {
+  @apply p-0 text-center font-primary text-black text-m-lg font-normal leading-none break-words;
+}
+
+.hero-container .title {
+  @apply p-0 text-center font-primary text-black text-m-lg font-bolder leading-loose break-words;
+}
+
+@screen lg {
+  .hero-container {
+    @apply pb-30px;
+  }
+
+  .hero-container .content {
+    @apply w-90pc mx-5px max-w-800px;
+  }
+
+  .hero-container .subtitle {
+    @apply text-base leading-normal;
+  }
+
+  .hero-container .title {
+    @apply text-xl;
+  }
+}
+
+/* TLDR */
+
+.tldr-container {
+  @apply flex p-10pc justify-center;
+  background: linear-gradient(to right, #ffe2fa 0%, #cceff3 100%);
+}
+
+.tldr-container .description {
+  @apply font-primary text-black text-m-xl font-bold text-left;
+}
+
+@screen lg {
+  .tldr-container {
+    @apply py-100px;
+  }
+}
+
+/* Products */
+
+.products-container {
+  @apply pb-30px;
+}
+
+.products-container .cards {
+  @apply flex flex-row mt-40px items-center justify-center;
+}
+
+.products-container .content {
+  @apply flex-col p-0;
+}
+
+.products-container .title {
+  @apply p-0 text-center font-primary text-black text-m-lg font-bolder leading-loose break-words;
+}
+
+@screen lg {
+  .products-container {
+    @apply py-100px;
+  }
+
+  .products-container .title {
+    @apply text-xl;
+  }
+}
+
+/* Product Cards */
+
+.product-card-container {
+  @apply w-90pc rounded-20px bg-center bg-no-repeat bg-contain p-20px m-10px flex flex-col;
+  @apply items-center justify-center;
+}
+
+.product-card-container .btn {
+  @apply p-5px border-white border border-solid my-15px;
+}
+
+.product-card-container .btn:disabled {
+  @apply bg-white text-black !important;
+}
+
+.product-card-container .description {
+  @apply text-white leading-normal;
+}
+
+.product-card-container .logo {
+  @apply rounded-50pc h-180px w-180px bg-no-repeat bg-contain mt-20px;
+}
+
+.product-card-container .title {
+  @apply leading-normal text-white text-xxl;
+}
+
+@screen lg {
+  .product-card-container {
+    @apply w-25pc;
+  }
 }
 
 /* purgecss end ignore */

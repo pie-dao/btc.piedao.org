@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { eth } from '@pie-dao/eth';
-import { If } from '@pie-dao/if-unless';
 import { store, view } from '@risingstack/react-easy-state';
+
+import Hero from '../components/Hero';
+import Products from '../components/Products';
+import TLDR from '../components/TLDR';
 
 const state = store({
   account: undefined,
@@ -13,20 +16,14 @@ eth.on('accountChanged', (message, { account }) => {
   state.account = account;
 });
 
-const Landing = () => {
-  const { account } = state;
-
-  return (
-    <div className="landing-container">
-      <span>
-        Welcome to PieDAO. Something is coming soon...
-        <If condition={!!account}>
-          <br />
-          <a href="#/liquidity">Liquidity</a>
-        </If>
-      </span>
-    </div>
-  );
-};
+const Landing = (props) => (
+  <div className="landing-container">
+    <span>
+      <Hero {...props} />
+      <TLDR {...props} />
+      <Products {...props} />
+    </span>
+  </div>
+);
 
 export default view(Landing);
