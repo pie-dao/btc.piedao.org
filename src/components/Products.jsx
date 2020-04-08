@@ -12,6 +12,10 @@ const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
     backgroundImage: `url(./assets/img/cards/${name}BG.png)`,
   };
 
+  if (linkText === 'Coming soon') {
+    styles.opacity = '50%';
+  }
+
   const logoStyle = {
     backgroundImage: `url(./assets/img/cards/${name}Icon.png)`,
   };

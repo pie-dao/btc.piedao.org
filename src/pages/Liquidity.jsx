@@ -6,7 +6,7 @@ import { view } from '@risingstack/react-easy-state';
 import PoolBalance from '../components/PoolBalance';
 
 const Liquidity = (props) => (
-  <div className="liquidity-container">
+  <div className="liquidity-container content">
     <Mint {...props} />
     <PoolBalance {...props} />
   </div>
