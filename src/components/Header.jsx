@@ -12,7 +12,7 @@ const headerStore = store({
   mobileMenuVisible: false,
 });
 
-const Header = ({ images }) => {
+const Header = ({ images, links }) => {
   const { logo } = images;
 
   const { mobileMenuVisible } = headerStore;
@@ -26,7 +26,7 @@ const Header = ({ images }) => {
       <div className="right">
         <a
           className="link"
-          href="https://docs.piedao.org/"
+          href={links.homepage}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +34,7 @@ const Header = ({ images }) => {
         </a>
         <a
           className="link"
-          href="https://pie283460.typeform.com/to/uy9NZt"
+          href={links.whitepaper}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -65,7 +65,7 @@ const Header = ({ images }) => {
                   <a
                     onClick={headerStore.toggle}
                     className="navbar-item"
-                    href="https://docs.piedao.org/"
+                    href={links.docs}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -76,7 +76,7 @@ const Header = ({ images }) => {
                   <a
                     onClick={headerStore.toggle}
                     className="navbar-item"
-                    href="https://pie283460.typeform.com/to/uy9NZt"
+                    href={links.whitepaper}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -98,6 +98,11 @@ const Header = ({ images }) => {
 Header.propTypes = {
   images: PropTypes.shape({
     logo: PropTypes.string.isRequired,
+  }).isRequired,
+  links: PropTypes.shape({
+    homepage: PropTypes.string.isRequired,
+    whitepaper: PropTypes.string.isRequired,
+    docs: PropTypes.string.isRequired,
   }).isRequired,
 };
 
