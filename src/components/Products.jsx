@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { eth } from '@pie-dao/eth';
 import { view } from '@risingstack/react-easy-state';
 
 const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
-  const { account, enable } = eth;
   const { description, linkText } = products[name];
 
   const styles = {
@@ -20,17 +18,8 @@ const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
     backgroundImage: `url(./assets/img/cards/${name}Icon.png)`,
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-
-    if (account) {
-      window.location.href = liquidity;
-      return;
-    }
-
-    enable().then(() => {
-      window.location.href = liquidity;
-    });
+  const handleClick = () => {
+    window.location.href = liquidity;
   };
 
   return (
