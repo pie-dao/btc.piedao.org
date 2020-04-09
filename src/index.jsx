@@ -76,9 +76,9 @@ const text = {
         + '(imBTC, pBTC, sBTC & wBTC)',
       linkText: 'Try it now',
     },
-    'CASH++': {
+    'USD++': {
       description:
-        'Diversify your cash position among different representations of USD, such as DAI, USDC, '
+        'Diversify your USD position among different representations of USD, such as DAI, USDC, '
         + 'USDT, etc.',
       linkText: 'Coming soon',
     },

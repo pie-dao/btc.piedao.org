@@ -53,50 +53,54 @@ const buildTokens = (mappedAmounts) => ({
 });
 
 const updateTokens = async ({ database }) => {
-  const [
-    imBTCBalance,
-    pBTCBalance,
-    sBTCBalance,
-    wBTCBalance,
-  ] = await Promise.all([
-    database.balance({ address: poolAddress, token: imBTCAddress }),
-    database.balance({ address: poolAddress, token: pBTCAddress }),
-    database.balance({ address: poolAddress, token: sBTCAddress }),
-    database.balance({ address: poolAddress, token: wBTCAddress }),
-  ]);
+  try {
+    const [
+      imBTCBalance,
+      pBTCBalance,
+      sBTCBalance,
+      wBTCBalance,
+    ] = await Promise.all([
+      database.balance({ address: poolAddress, token: imBTCAddress }),
+      database.balance({ address: poolAddress, token: pBTCAddress }),
+      database.balance({ address: poolAddress, token: sBTCAddress }),
+      database.balance({ address: poolAddress, token: wBTCAddress }),
+    ]);
 
-  const totalSupply = imBTCBalance.plus(pBTCBalance).plus(sBTCBalance).plus(wBTCBalance);
+    const totalSupply = imBTCBalance.plus(pBTCBalance).plus(sBTCBalance).plus(wBTCBalance);
 
-  const imBTCPercentage = imBTCBalance.dividedBy(totalSupply);
-  const pBTCPercentage = pBTCBalance.dividedBy(totalSupply);
-  const sBTCPercentage = sBTCBalance.dividedBy(totalSupply);
-  const wBTCPercentage = wBTCBalance.dividedBy(totalSupply);
+    const imBTCPercentage = imBTCBalance.dividedBy(totalSupply);
+    const pBTCPercentage = pBTCBalance.dividedBy(totalSupply);
+    const sBTCPercentage = sBTCBalance.dividedBy(totalSupply);
+    const wBTCPercentage = wBTCBalance.dividedBy(totalSupply);
 
-  const imBTCRequired = BigNumber(1).multipliedBy(imBTCPercentage);
-  const pBTCRequired = BigNumber(1).multipliedBy(pBTCPercentage);
-  const sBTCRequired = BigNumber(1).multipliedBy(sBTCPercentage);
-  const wBTCRequired = BigNumber(1).multipliedBy(wBTCPercentage);
+    const imBTCRequired = BigNumber(1).multipliedBy(imBTCPercentage);
+    const pBTCRequired = BigNumber(1).multipliedBy(pBTCPercentage);
+    const sBTCRequired = BigNumber(1).multipliedBy(sBTCPercentage);
+    const wBTCRequired = BigNumber(1).multipliedBy(wBTCPercentage);
 
-  const updates = {
-    imBTC: {
-      amountPerUnit: imBTCRequired,
-      weight: imBTCPercentage.multipliedBy(100).dp(2),
-    },
-    pBTC: {
-      amountPerUnit: pBTCRequired,
-      weight: pBTCPercentage.multipliedBy(100).dp(2),
-    },
-    sBTC: {
-      amountPerUnit: sBTCRequired,
-      weight: sBTCPercentage.multipliedBy(100).dp(2),
-    },
-    wBTC: {
-      amountPerUnit: wBTCRequired,
-      weight: wBTCPercentage.multipliedBy(100).dp(2),
-    },
-  };
+    const updates = {
+      imBTC: {
+        amountPerUnit: imBTCRequired,
+        weight: imBTCPercentage.multipliedBy(100).dp(2),
+      },
+      pBTC: {
+        amountPerUnit: pBTCRequired,
+        weight: pBTCPercentage.multipliedBy(100).dp(2),
+      },
+      sBTC: {
+        amountPerUnit: sBTCRequired,
+        weight: sBTCPercentage.multipliedBy(100).dp(2),
+      },
+      wBTC: {
+        amountPerUnit: wBTCRequired,
+        weight: wBTCPercentage.multipliedBy(100).dp(2),
+      },
+    };
 
-  mint.updateTokens(updates);
+    mint.updateTokens(updates);
+  } catch (e) {
+    console.error('TOKEN UPDATE ERROR', e);
+  }
 };
 
 export const initialize = async ({ database }) => {
@@ -135,16 +139,20 @@ export const initialize = async ({ database }) => {
   };
 
   if (!mint.initialized) {
-    mint.init({
-      approve,
-      database,
-      mintable,
-      submit,
-      tokens,
-    });
+    try {
+      mint.init({
+        approve,
+        database,
+        mintable,
+        submit,
+        tokens,
+      });
 
-    setInterval(() => { updateTokens({ database }); }, 10000);
-    setTimeout(() => { updateTokens({ database }); }, 1000);
+      setInterval(() => { updateTokens({ database }); }, 10000);
+      setTimeout(() => { updateTokens({ database }); }, 1000);
+    } catch (e) {
+      console.error('MINT INITIALIZING ERROR', e);
+    }
   } else {
     // TODO: make this unnecessary
     window.location.reload();

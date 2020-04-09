@@ -77,7 +77,7 @@ const Products = (props) => {
         <div className="cards">
           <ProductCard {...props} name="BTC++" />
           <ProductCard {...props} name="AWP++" />
-          <ProductCard {...props} name="CASH++" />
+          <ProductCard {...props} name="USD++" />
         </div>
       </div>
     </div>

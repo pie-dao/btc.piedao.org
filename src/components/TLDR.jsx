@@ -5,8 +5,10 @@ import { view } from '@risingstack/react-easy-state';
 
 const TLDR = ({ text: { tldr: { description } } }) => (
   <div className="tldr-container">
-    <div className="description">
-      {description}
+    <div className="content">
+      <div className="description">
+        {description}
+      </div>
     </div>
   </div>
 );

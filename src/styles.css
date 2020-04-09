@@ -194,12 +194,8 @@
   @apply flex-col;
 }
 
-.hero-container img {
-  @apply mb-30px -mt-30px;
-}
-
 .hero-container .subtitle {
-  @apply p-0 text-center font-primary text-black text-m-lg font-normal leading-none break-words;
+  @apply p-0 mt-20px text-center font-primary text-black text-sm font-normal leading-none break-words;
 }
 
 .hero-container .title {
@@ -211,12 +207,16 @@
     @apply pb-30px;
   }
 
+  .hero-container img {
+    @apply mb-30px -mt-30px;
+  }
+
   .hero-container .content {
     @apply w-90pc mx-5px max-w-800px;
   }
 
   .hero-container .subtitle {
-    @apply text-base leading-normal;
+    @apply text-base leading-normal text-m-lg mt-0;
   }
 
   .hero-container .title {
@@ -227,17 +227,21 @@
 /* TLDR */
 
 .tldr-container {
-  @apply flex p-10pc justify-center;
+  @apply flex p-10pc mb-10pc justify-center;
   background: linear-gradient(to right, #ffe2fa 0%, #cceff3 100%);
 }
 
 .tldr-container .description {
-  @apply font-primary text-black text-m-xl font-bold text-left;
+  @apply font-primary text-black text-m-lg font-bold;
 }
 
 @screen lg {
   .tldr-container {
-    @apply py-100px;
+    @apply py-100px mb-0;
+  }
+
+  .tldr-container .description {
+    @apply text-xl;
   }
 }
 
@@ -248,7 +252,7 @@
 }
 
 .products-container .cards {
-  @apply flex flex-row mt-40px items-center justify-center;
+  @apply flex flex-col items-center justify-center;
 }
 
 .products-container .content {
@@ -256,7 +260,7 @@
 }
 
 .products-container .title {
-  @apply p-0 text-center font-primary text-black text-m-lg font-bolder leading-loose break-words;
+  @apply p-0 text-center font-primary text-black text-m-lg font-bolder break-words;
 }
 
 @screen lg {
@@ -264,8 +268,12 @@
     @apply py-100px;
   }
 
+  .products-container .cards {
+    @apply flex-row mt-40px;
+  }
+
   .products-container .title {
-    @apply text-xl;
+    @apply text-xl leading-loose;
   }
 }
 
