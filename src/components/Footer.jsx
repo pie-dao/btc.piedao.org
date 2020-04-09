@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { view } from '@risingstack/react-easy-state';
 
 const year = (new Date()).getFullYear();
 
-const Footer = () => (
+const Footer = ({ links }) => (
   <div className="footer-container">
     <div className="left">
       <span className="footer-link">
@@ -14,7 +15,7 @@ const Footer = () => (
     <div className="right">
       <a
         className="footer-link"
-        href="https://discord.gg/eJTYNUF"
+        href={links.discord}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -22,7 +23,7 @@ const Footer = () => (
       </a>
       <a
         className="footer-link"
-        href="https://twitter.com/PieDAO_DeFi?s=20"
+        href={links.twitter}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -30,7 +31,7 @@ const Footer = () => (
       </a>
       <a
         className="footer-link"
-        href="https://medium.com/piedao"
+        href={links.medium}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -38,7 +39,7 @@ const Footer = () => (
       </a>
       <a
         className="footer-link"
-        href="https://forum.piedao.org/"
+        href={links.forum}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -46,7 +47,7 @@ const Footer = () => (
       </a>
       <a
         className="footer-link"
-        href="https://docs.piedao.org/"
+        href={links.docs}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -54,7 +55,7 @@ const Footer = () => (
       </a>
       <a
         className="footer-link"
-        href="hhttps://github.com/pie-dao/"
+        href={links.github}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -64,5 +65,18 @@ const Footer = () => (
     </div>
   </div>
 );
+
+
+Footer.propTypes = {
+  links: PropTypes.shape({
+    discord: PropTypes.string.isRequired,
+    twitter: PropTypes.string.isRequired,
+    medium: PropTypes.string.isRequired,
+    forum: PropTypes.string.isRequired,
+    docs: PropTypes.string.isRequired,
+    github: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 
 export default view(Footer);

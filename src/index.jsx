@@ -41,6 +41,14 @@ const images = {
 
 const links = {
   liquidity: '#/liquidity',
+  homepage: 'https://docs.piedao.org/',
+  whitepaper: 'https://pie283460.typeform.com/to/uy9NZt',
+  docs: 'https://docs.piedao.org/',
+  discord: 'https://discord.gg/eJTYNUF',
+  twitter: 'https://twitter.com/PieDAO_DeFi?s=20',
+  medium: 'https://medium.com/piedao',
+  forum: 'https://forum.piedao.org/',
+  github: 'https://github.com/pie-dao/',
 };
 
 const text = {
