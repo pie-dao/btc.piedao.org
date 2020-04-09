@@ -4,7 +4,16 @@ import { view } from '@risingstack/react-easy-state';
 
 const year = (new Date()).getFullYear();
 
-const Footer = ({ links }) => (
+const Footer = ({
+  links: {
+    discord,
+    docs,
+    forum,
+    github,
+    medium,
+    twitter,
+  },
+}) => (
   <div className="footer-container">
     <div className="left">
       <span className="footer-link">
@@ -15,7 +24,7 @@ const Footer = ({ links }) => (
     <div className="right">
       <a
         className="footer-link"
-        href={links.discord}
+        href={discord}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -23,7 +32,7 @@ const Footer = ({ links }) => (
       </a>
       <a
         className="footer-link"
-        href={links.twitter}
+        href={twitter}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -31,7 +40,7 @@ const Footer = ({ links }) => (
       </a>
       <a
         className="footer-link"
-        href={links.medium}
+        href={medium}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -39,7 +48,7 @@ const Footer = ({ links }) => (
       </a>
       <a
         className="footer-link"
-        href={links.forum}
+        href={forum}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -47,7 +56,7 @@ const Footer = ({ links }) => (
       </a>
       <a
         className="footer-link"
-        href={links.docs}
+        href={docs}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -55,7 +64,7 @@ const Footer = ({ links }) => (
       </a>
       <a
         className="footer-link"
-        href={links.github}
+        href={github}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -70,11 +79,11 @@ const Footer = ({ links }) => (
 Footer.propTypes = {
   links: PropTypes.shape({
     discord: PropTypes.string.isRequired,
-    twitter: PropTypes.string.isRequired,
-    medium: PropTypes.string.isRequired,
-    forum: PropTypes.string.isRequired,
     docs: PropTypes.string.isRequired,
+    forum: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
+    medium: PropTypes.string.isRequired,
+    twitter: PropTypes.string.isRequired,
   }).isRequired,
 };
 

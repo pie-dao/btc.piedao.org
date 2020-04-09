@@ -13,9 +13,10 @@ const headerStore = store({
 });
 
 const Header = ({ images, links }) => {
+  const { docs, homepage, whitepaper } = links;
   const { logo } = images;
+  const { mobileMenuVisible, toggle } = headerStore;
 
-  const { mobileMenuVisible } = headerStore;
   return (
     <div className="header-container">
       <div className="left">
@@ -26,7 +27,7 @@ const Header = ({ images, links }) => {
       <div className="right">
         <a
           className="link"
-          href={links.homepage}
+          href={homepage}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +35,7 @@ const Header = ({ images, links }) => {
         </a>
         <a
           className="link"
-          href={links.whitepaper}
+          href={whitepaper}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -43,19 +44,19 @@ const Header = ({ images, links }) => {
         <ConnectButton />
         <div className="mobile-placeholder" />
 
-        <button className="hamburger" type="button" onClick={headerStore.toggle}>
+        <button className="hamburger" type="button" onClick={toggle}>
           <img src="./assets/img/hamburgerIcon.svg" alt="hamburger icon" className="w-min-20px" />
         </button>
         {mobileMenuVisible && (
           <div className="overlay">
-            <button type="button" className="close" onClick={headerStore.toggle}>
+            <button type="button" className="close" onClick={toggle}>
               Close
             </button>
             <nav>
               <ul>
                 <li>
                   <Link
-                    onClick={headerStore.toggle}
+                    onClick={toggle}
                     to="/"
                   >
                     home
@@ -63,9 +64,9 @@ const Header = ({ images, links }) => {
                 </li>
                 <li>
                   <a
-                    onClick={headerStore.toggle}
+                    onClick={toggle}
                     className="navbar-item"
-                    href={links.docs}
+                    href={docs}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -74,9 +75,9 @@ const Header = ({ images, links }) => {
                 </li>
                 <li>
                   <a
-                    onClick={headerStore.toggle}
+                    onClick={toggle}
                     className="navbar-item"
-                    href={links.whitepaper}
+                    href={whitepaper}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -100,9 +101,9 @@ Header.propTypes = {
     logo: PropTypes.string.isRequired,
   }).isRequired,
   links: PropTypes.shape({
+    docs: PropTypes.string.isRequired,
     homepage: PropTypes.string.isRequired,
     whitepaper: PropTypes.string.isRequired,
-    docs: PropTypes.string.isRequired,
   }).isRequired,
 };
 

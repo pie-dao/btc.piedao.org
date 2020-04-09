@@ -40,15 +40,15 @@ const images = {
 };
 
 const links = {
-  liquidity: '#/liquidity',
-  homepage: 'https://docs.piedao.org/',
-  whitepaper: 'https://pie283460.typeform.com/to/uy9NZt',
-  docs: 'https://docs.piedao.org/',
   discord: 'https://discord.gg/eJTYNUF',
-  twitter: 'https://twitter.com/PieDAO_DeFi?s=20',
-  medium: 'https://medium.com/piedao',
+  docs: 'https://docs.piedao.org/',
   forum: 'https://forum.piedao.org/',
   github: 'https://github.com/pie-dao/',
+  homepage: 'https://docs.piedao.org/',
+  liquidity: '#/liquidity',
+  medium: 'https://medium.com/piedao',
+  twitter: 'https://twitter.com/PieDAO_DeFi?s=20',
+  whitepaper: 'https://pie283460.typeform.com/to/uy9NZt',
 };
 
 const text = {
