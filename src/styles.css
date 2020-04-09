@@ -183,6 +183,10 @@
   @apply pl-12px;
 }
 
+.mint-container .recharts-pie-labels {
+  @apply hidden;
+}
+
 /* Hero */
 
 .hero-container {
