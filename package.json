@@ -1,6 +1,6 @@
 {
   "name": "btc.piedao.org",
-  "version": "0.99.5",
+  "version": "1.0.0",
   "private": true,
   "main": "src/index.jsx",
   "homepage": "./",
