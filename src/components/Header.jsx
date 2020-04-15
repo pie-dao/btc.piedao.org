@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ConnectButton } from '@pie-dao/eth';
+import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { store, view } from '@risingstack/react-easy-state';
 
@@ -31,7 +32,7 @@ const Header = ({ images, links }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          docs
+          <FormattedMessage id="header.docs" defaultMessage="docs" />
         </a>
         <a
           className="link"
@@ -39,7 +40,7 @@ const Header = ({ images, links }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          whitepaper
+          <FormattedMessage id="header.whitepaper" defaultMessage="whitepaper" />
         </a>
         <ConnectButton />
         <div className="mobile-placeholder" />
@@ -50,7 +51,7 @@ const Header = ({ images, links }) => {
         {mobileMenuVisible && (
           <div className="overlay">
             <button type="button" className="close" onClick={toggle}>
-              Close
+              <FormattedMessage id="header.hamburger.close" defaultMessage="close" />
             </button>
             <nav>
               <ul>
@@ -59,7 +60,7 @@ const Header = ({ images, links }) => {
                     onClick={toggle}
                     to="/"
                   >
-                    home
+                    <FormattedMessage id="header.hamburger.home" defaultMessage="home" />
                   </Link>
                 </li>
                 <li>
@@ -70,7 +71,7 @@ const Header = ({ images, links }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    docs
+                    <FormattedMessage id="header.hamburger.docs" defaultMessage="docs" />
                   </a>
                 </li>
                 <li>
@@ -81,7 +82,7 @@ const Header = ({ images, links }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    whitepaper
+                    <FormattedMessage id="header.hamburger.whitepaper" defaultMessage="whitepaper" />
                   </a>
                 </li>
                 <li>

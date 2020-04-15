@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { useIntl, FormattedMessage } from 'react-intl';
+
 import { view } from '@risingstack/react-easy-state';
 
-const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
-  const { description, linkText } = products[name];
-
+const ProductCard = ({
+  name, links: { liquidity }, linkText, description, disabled,
+}) => {
   const styles = {
     backgroundImage: `url(./assets/img/cards/${name}BG.png)`,
   };
 
-  if (linkText === 'Coming soon') {
+  if (disabled) {
     styles.opacity = '50%';
   }
 
@@ -48,25 +50,51 @@ ProductCard.propTypes = {
     liquidity: PropTypes.string.isRequired,
   }).isRequired,
   name: PropTypes.string.isRequired,
-  text: PropTypes.shape({
-    products: PropTypes.object.isRequired,
-  }).isRequired,
+  linkText: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
 };
 
 const Products = (props) => {
-  const { text: { products: { title } } } = props;
+  const { formatMessage } = useIntl();
 
   return (
     <div className="products-container">
       <div className="content">
         <div className="title">
-          {title}
+          <FormattedMessage id="products.title" defaultMessage="Choose the right diversification strategy for you" />
         </div>
 
         <div className="cards">
-          <ProductCard {...props} name="BTC++" />
-          <ProductCard {...props} name="AWP++" />
-          <ProductCard {...props} name="USD++" />
+          <ProductCard
+            {...props}
+            name="BTC++"
+            description={formatMessage({ id: 'products.btc++.description' })}
+            linkText={formatMessage({ id: 'products.btc++.linkText' })}
+          >
+            <FormattedMessage id="products.btc++.description" defaultMessage="Diversify your Bitcoin positions among different representations of BTC (imBTC, pBTC, sBTC & wBTC)" />
+            <FormattedMessage id="products.btc++.linkText" defaultMessage="Try it now" />
+          </ProductCard>
+          <ProductCard
+            {...props}
+            name="AWP++"
+            description={formatMessage({ id: 'products.awp++.description' })}
+            linkText={formatMessage({ id: 'products.awp++.linkText' })}
+            disabled
+          >
+            <FormattedMessage id="products.awp++.description" defaultMessage="Diversify like Ray Dalio with a portfolio that keeps you safe in all weather. Bonus: with crypto assets." />
+            <FormattedMessage id="products.awp++.linkText" defaultMessage="Coming soon" />
+          </ProductCard>
+          <ProductCard
+            {...props}
+            name="USD++"
+            description={formatMessage({ id: 'products.usd++.description' })}
+            linkText={formatMessage({ id: 'products.usd++.linkText' })}
+            disabled
+          >
+            <FormattedMessage id="products.usd++.description" defaultMessage="Diversify your USD position among different representations of USD, such as DAI, USDC, USDT, etc." />
+            <FormattedMessage id="products.usd++.linkText" defaultMessage="Coming soon" />
+          </ProductCard>
         </div>
       </div>
     </div>

@@ -1,24 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
+import { FormattedMessage } from 'react-intl';
 import { view } from '@risingstack/react-easy-state';
 
-const TLDR = ({ text: { tldr: { description } } }) => (
+const TLDR = () => (
   <div className="tldr-container">
     <div className="content">
       <div className="description">
-        {description}
+        <FormattedMessage id="tldr.description" defaultMessage="BTC++ is a weighed allocation between the different representations of Bitcoin on Ethereum. Bitcoin, for DeFi, diversified." />
       </div>
     </div>
   </div>
 );
-
-TLDR.propTypes = {
-  text: PropTypes.shape({
-    tldr: PropTypes.shape({
-      description: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default view(TLDR);

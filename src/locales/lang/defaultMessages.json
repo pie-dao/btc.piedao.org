@@ -1,0 +1,103 @@
+[
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "forum",
+        "id": "footer.forum"
+      },
+      {
+        "defaultMessage": "documentation",
+        "id": "footer.documentation"
+      }
+    ],
+    "path": "src/components/Footer.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "docs",
+        "id": "header.docs"
+      },
+      {
+        "defaultMessage": "whitepaper",
+        "id": "header.whitepaper"
+      },
+      {
+        "defaultMessage": "close",
+        "id": "header.hamburger.close"
+      },
+      {
+        "defaultMessage": "home",
+        "id": "header.hamburger.home"
+      },
+      {
+        "defaultMessage": "docs",
+        "id": "header.hamburger.docs"
+      },
+      {
+        "defaultMessage": "whitepaper",
+        "id": "header.hamburger.whitepaper"
+      }
+    ],
+    "path": "src/components/Header.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Ready to diversify?",
+        "id": "hero.title"
+      },
+      {
+        "defaultMessage": "Every Hall-of-Fame investor is obsessed with the question of how best to diversify to maximize returns and minimize risks.",
+        "id": "hero.description"
+      },
+      {
+        "defaultMessage": "Start now",
+        "id": "hero.linktext"
+      }
+    ],
+    "path": "src/components/Hero.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Choose the right diversification strategy for you",
+        "id": "products.title"
+      },
+      {
+        "defaultMessage": "Diversify your Bitcoin positions among different representations of BTC (imBTC, pBTC, sBTC & wBTC)",
+        "id": "products.btc++.description"
+      },
+      {
+        "defaultMessage": "Try it now",
+        "id": "products.btc++.linkText"
+      },
+      {
+        "defaultMessage": "Diversify like Ray Dalio with a portfolio that keeps you safe in all weather. Bonus: with crypto assets.",
+        "id": "products.awp++.description"
+      },
+      {
+        "defaultMessage": "Coming soon",
+        "id": "products.awp++.linkText"
+      },
+      {
+        "defaultMessage": "Diversify your USD position among different representations of USD, such as DAI, USDC, USDT, etc.",
+        "id": "products.usd++.description"
+      },
+      {
+        "defaultMessage": "Coming soon",
+        "id": "products.usd++.linkText"
+      }
+    ],
+    "path": "src/components/Products.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "BTC++ is a weighed allocation between the different representations of Bitcoin on Ethereum. Bitcoin, for DeFi, diversified.",
+        "id": "tldr.description"
+      }
+    ],
+    "path": "src/components/TLDR.json"
+  }
+]

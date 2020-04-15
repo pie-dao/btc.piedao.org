@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { view } from '@risingstack/react-easy-state';
 
 const year = (new Date()).getFullYear();
@@ -23,7 +24,7 @@ const Footer = ({
     </div>
     <div className="right">
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={discord}
         target="_blank"
         rel="noopener noreferrer"
@@ -31,7 +32,7 @@ const Footer = ({
         Discord
       </a>
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={twitter}
         target="_blank"
         rel="noopener noreferrer"
@@ -39,7 +40,7 @@ const Footer = ({
         Twitter
       </a>
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={medium}
         target="_blank"
         rel="noopener noreferrer"
@@ -47,23 +48,23 @@ const Footer = ({
         Medium
       </a>
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={forum}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Forum
+        <FormattedMessage id="footer.forum" defaultMessage="forum" />
       </a>
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={docs}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Documentation
+        <FormattedMessage id="footer.documentation" defaultMessage="documentation" />
       </a>
       <a
-        className="footer-link"
+        className="footer-link capitalize"
         href={github}
         target="_blank"
         rel="noopener noreferrer"

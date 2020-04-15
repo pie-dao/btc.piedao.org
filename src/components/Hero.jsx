@@ -1,27 +1,28 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { FormattedMessage } from 'react-intl';
+
 import { view } from '@risingstack/react-easy-state';
 
 const Hero = ({
   images: { hero },
   links: { liquidity },
-  text: { hero: { description, linkText, title } },
 }) => (
   <div className="hero-container">
     <div className="content">
       <div className="title">
-        {title}
+        <FormattedMessage id="hero.title" defaultMessage="Ready to diversify?" />
       </div>
 
       <img src={hero} alt="hero" />
 
       <div className="subtitle">
-        {description}
+        <FormattedMessage id="hero.description" defaultMessage="Every Hall-of-Fame investor is obsessed with the question of how best to diversify to maximize returns and minimize risks." />
       </div>
 
       <a className="btn" href={liquidity}>
-        {linkText}
+        <FormattedMessage id="hero.linktext" defaultMessage="Start now" />
       </a>
     </div>
   </div>
@@ -33,13 +34,6 @@ Hero.propTypes = {
   }).isRequired,
   links: PropTypes.shape({
     liquidity: PropTypes.string.isRequired,
-  }).isRequired,
-  text: PropTypes.shape({
-    hero: PropTypes.shape({
-      description: PropTypes.string.isRequired,
-      linkText: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-    }).isRequired,
   }).isRequired,
 };
 
