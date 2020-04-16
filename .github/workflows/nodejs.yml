@@ -33,3 +33,5 @@ jobs:
           # directory path to upload
           path: ./build
       - name: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
+        run: print ${{ steps.upload.outputs.hash }}
+        
