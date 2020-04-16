@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Build and Deploy
 
 on:
   push:
@@ -32,6 +32,13 @@ jobs:
         with:
           # directory path to upload
           path: ./build
-      - name: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
-        run: echo ${{ steps.upload.outputs.hash }}
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sha: 843dea1cc2e721163c20a5c876b5b155f7f3aa75
+          body: |
+            Deployed at: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
+          position: 1
+
         
