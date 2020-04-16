@@ -99,5 +99,14 @@
       }
     ],
     "path": "src/components/TLDR.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Get BTC++ on Uniswap",
+        "id": "liquidity.getbtc++"
+      }
+    ],
+    "path": "src/pages/Liquidity.json"
   }
 ]

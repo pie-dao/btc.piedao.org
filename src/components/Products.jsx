@@ -71,6 +71,7 @@ const Products = (props) => {
             name="BTC++"
             description={formatMessage({ id: 'products.btc++.description' })}
             linkText={formatMessage({ id: 'products.btc++.linkText' })}
+            disabled={false}
           >
             <FormattedMessage id="products.btc++.description" defaultMessage="Diversify your Bitcoin positions among different representations of BTC (imBTC, pBTC, sBTC & wBTC)" />
             <FormattedMessage id="products.btc++.linkText" defaultMessage="Try it now" />
@@ -99,14 +100,6 @@ const Products = (props) => {
       </div>
     </div>
   );
-};
-
-Products.propTypes = {
-  text: PropTypes.shape({
-    products: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
 
 export default view(Products);
