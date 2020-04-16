@@ -12,8 +12,6 @@ on:
 jobs:
   build:
     name: Deploy to IPFS
-    outputs: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
-
     runs-on: ubuntu-latest
 
     strategy:
