@@ -30,11 +30,13 @@ jobs:
         with:
           # directory path to upload
           path: ./build
-      - name: Create Comment
-        uses: github-actions-up-and-running/pr-comment@v1.0.0
+      - name: Comment Pull Request
+        uses: thollander/actions-comment-pull-request@1.0.0
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: | 
+          # Message that should be printed in the pull request
+          message: |
             Deployed at: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
+          # Github token of the repository (automatically created by Github)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         
