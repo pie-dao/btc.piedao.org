@@ -11,6 +11,8 @@ on:
 
 jobs:
   build:
+    name: Deploy to IPFS
+    outputs: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
 
     runs-on: ubuntu-latest
 
@@ -33,5 +35,5 @@ jobs:
           # directory path to upload
           path: ./build
       - name: https://cloudflare-ipfs.com/ipfs/${{ steps.upload.outputs.hash }}/#/
-        run: print ${{ steps.upload.outputs.hash }}
+        run: echo ${{ steps.upload.outputs.hash }}
         
