@@ -12,7 +12,7 @@
 /* Header */
 
 .header-container {
-  @apply content font-secondary;
+  @apply content font-secondary overflow-visible;
 }
 
 .header-container .hamburger {

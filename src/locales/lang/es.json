@@ -1,0 +1,22 @@
+{
+  "footer.documentation": "documentación",
+  "footer.forum": "foro",
+  "header.docs": "documentación",
+  "header.hamburger.close": "cerrar",
+  "header.hamburger.docs": "documentación",
+  "header.hamburger.home": "inicio",
+  "header.hamburger.whitepaper": "whitepaper",
+  "header.whitepaper": "whitepaper",
+  "hero.description": "Todos los inversores de la 'Hall-of-Fame' están obsesionados en como es mejor diversificar para maximizar sus retornos y minimizar riesgos.",
+  "hero.linktext": "Empieza ahora",
+  "hero.title": "Preparado para diversificar?",
+  "liquidity.getbtc++": "Consigue BTC++ en Uniswap",
+  "products.awp++.description": "Diversifica como Ray Dalio con una cartera que te mantiene siempre salvo. Bonus: con crypto activos.",
+  "products.awp++.linkText": "Próximamente",
+  "products.btc++.description": "Diversifica tus posiciones Bitcoin entre las diferentes representaciones de BTC (imBTC, pBTC, sBTC & wBTC)",
+  "products.btc++.linkText": "Pruébalo ahora",
+  "products.title": "Escoje la estratégia de diversificación más adecuada para tí",
+  "products.usd++.description": "Diversifica tus posiciones USD entre las diferentes representaciones de USD, como DAI, USDC, USDT, etc.",
+  "products.usd++.linkText": "Próximamente",
+  "tldr.description": "BTC++ es una asignación ponderada entre las distintas representaciones de Bitcoin en Ethereum. Bitcoin, para DeFi, diversificado."
+}

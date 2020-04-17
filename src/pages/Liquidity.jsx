@@ -3,7 +3,7 @@ import React from 'react';
 import { eth } from '@pie-dao/eth';
 import { Mint } from '@pie-dao/mint';
 import { view } from '@risingstack/react-easy-state';
-
+import { FormattedMessage } from 'react-intl';
 import PoolBalance from '../components/PoolBalance';
 
 const handleClick = () => {
@@ -26,7 +26,9 @@ const Liquidity = (props) => {
 
   return (
     <div className="liquidity-container content">
-      <button className="btn" type="button" onClick={handleClick}>Get BTC++ on Uniswap</button>
+      <button className="btn" type="button" onClick={handleClick}>
+        <FormattedMessage id="liquidity.getbtc++" defaultMessage="Get BTC++ on Uniswap" />
+      </button>
     </div>
   );
 };

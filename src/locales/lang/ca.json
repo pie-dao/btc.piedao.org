@@ -1,0 +1,22 @@
+{
+  "footer.documentation": "documentació",
+  "footer.forum": "forum",
+  "header.docs": "documentació",
+  "header.hamburger.close": "tancar",
+  "header.hamburger.docs": "documentació",
+  "header.hamburger.home": "inici",
+  "header.hamburger.whitepaper": "whitepaper",
+  "header.whitepaper": "whitepaper",
+  "hero.description": "Tots els inversors de la 'Hall-of-Fame' están obsesionats amb com és millor diversificar per maximitzar beneficis i minimitzar riscos.",
+  "hero.linktext": "Comença ara",
+  "hero.title": "Preparat per diversificar?",
+  "liquidity.getbtc++": "Aconsegueix BTC++ a Uniswap",
+  "products.awp++.description": "Diversifica com en Ray Dalio amb una cartera que et manté sempre segur. Bonus: amb crypto actius.",
+  "products.awp++.linkText": "Properament",
+  "products.btc++.description": "Diversifica les teves posicions de Bitcoin entre les diferents representacions de BTC (imBTC, pBTC, sBTC & wBTC)",
+  "products.btc++.linkText": "Prova'l ara",
+  "products.title": "Escull l'estratègia de diversificació més adequada per tu",
+  "products.usd++.description": "Diversifica les teves posicions USD entre les diferents representacions d'USD, com DAI, USDC, USDT, etc.",
+  "products.usd++.linkText": "Properament",
+  "tldr.description": "BTC++ es una asignació ponderada entre les diferents representacions de Bitcoin a Ethereum. Bitcoin, per DeFi, diversificat."
+}
