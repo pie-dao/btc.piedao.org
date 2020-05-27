@@ -1,0 +1,48 @@
+name: Build, Deploy, and Launch to Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Deploy to IPFS and publish on DNSimple
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
+
+      - name: Upload to IPFS
+        id: upload
+        uses: aquiladev/ipfs-action@v0.1.2-alpha.0
+        with:
+          # directory path to upload
+          path: ./build
+
+      - name: Pin on Pinata
+        uses: pie-dao/pinata-action@v0.1.0
+        with:
+          PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
+          PINATA_SECRET_API_KEY: ${{ secrets.PINATA_SECRET_API_KEY }}
+
+        name: Update DNS records
+        uses: pie-dao/dnsimple-action@0.1.0
+        with:
+          DNSIMPLE_ACCESS_TOKEN: ${{ secrets.DNSIMPLE_ACCESS_TOKEN }}
+          DOMAIN: piedao.org
+          DNSLINK:
+            - piedao.org
+            - btc.piedao.org
