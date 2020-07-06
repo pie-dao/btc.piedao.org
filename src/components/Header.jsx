@@ -13,7 +13,7 @@ const headerStore = store({
 });
 
 const Header = ({ images, links }) => {
-  const { docs, homepage, whitepaper } = links;
+  const { docs, homepage } = links;
   const { logo } = images;
   const { mobileMenuVisible, toggle } = headerStore;
 
@@ -32,14 +32,6 @@ const Header = ({ images, links }) => {
           rel="noopener noreferrer"
         >
           docs
-        </a>
-        <a
-          className="link"
-          href={whitepaper}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          whitepaper
         </a>
         <ConnectButton />
         <div className="mobile-placeholder" />
@@ -71,17 +63,6 @@ const Header = ({ images, links }) => {
                     rel="noopener noreferrer"
                   >
                     docs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={toggle}
-                    className="navbar-item"
-                    href={whitepaper}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    whitepaper
                   </a>
                 </li>
                 <li>
