@@ -11,7 +11,6 @@ import App from './App';
 import { decimalPlaces, initialize } from './setup/tokens';
 
 const blocknativeDappId = '523b279d-0fe0-42e8-8977-e688c3686e57';
-const simpleIdAppId = '76c97a89-5ff2-4730-beac-3320eed25ded';
 
 const database = new BlockchainDatabase({ blocknativeDappId });
 
@@ -24,7 +23,6 @@ eth.on('accountChanged', async (message, { account }) => {
 });
 
 window.document.addEventListener('DOMContentLoaded', () => {
-  eth.init({ blocknativeDappId, simpleIdAppId });
 });
 
 const config = {

@@ -51,24 +51,27 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.0.5",
     "@pie-dao/abis": "1.0.0",
     "@pie-dao/blockchain": "1.0.1",
     "@pie-dao/eth": "1.2.0",
     "@pie-dao/eth-tailwind": "1.0.0",
     "@pie-dao/if-unless": "1.0.1",
-    "@pie-dao/mint": "1.0.4",
+    "@pie-dao/mint": "1.1.1",
     "@pie-dao/mint-tailwind": "1.0.0",
     "@pie-dao/tailwind": "1.1.2",
     "@pie-dao/utils": "1.0.0",
     "@risingstack/react-easy-state": "^6.2.0",
+    "@web3-react/core": "^6.1.1",
     "bignumber.js": "^9.0.0",
-    "ethers": "^4.0.46",
+    "ethers": "^5.0.7",
     "file": "^0.2.2",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "use-wallet": "^0.7.1"
   },
   "browserslist": {
     "production": [
