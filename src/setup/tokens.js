@@ -113,7 +113,7 @@ export const initialize = async ({ database }) => {
 
   // Load up pools target weights
   const controllerContract = new ethers.Contract(controllerAddress, pieSmartPool, signer);
-  const poolAmount = ethers.utils.bigNumberify('1000000000000000000');
+  const poolAmount = ethers.BigNumber.from('1000000000000000000');
   const poolAmounts = await controllerContract.calcTokensForAmount(poolAmount);
 
   const mappedAmounts = {};
@@ -126,9 +126,15 @@ export const initialize = async ({ database }) => {
   console.log('TOKEN CONFIG', tokens);
 
   const submit = async () => {
-    const amount = BigNumber(mint.slider).dividedBy(10 ** decimalPlaces).multipliedBy(10 ** 18);
-    const joinAmount = ethers.utils.bigNumberify(amount.toFixed());
+    const amount = BigNumber(mint.slider).multipliedBy(10 ** 18);
+    const joinAmount = ethers.BigNumber.from(amount.toFixed());
     const overrides = transactionOverrides({ gasLimit: 1000000 });
+
+    console.log({
+      amount: amount.toString(),
+      joinAmount: joinAmount.toString(),
+      slider: mint.slider
+    })
 
     await approve({ spender: controllerAddress, token: imBTCAddress });
     await approve({ spender: controllerAddress, token: pBTCAddress });

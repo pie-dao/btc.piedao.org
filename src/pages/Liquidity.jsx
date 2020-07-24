@@ -19,8 +19,8 @@ const Liquidity = (props) => {
   if (eth.account) {
     return (
       <div className="liquidity-container content">
-        <Mint {...props} />
         <PoolBalance {...props} />
+        <Mint {...props} />
         <button className="btn" type="button" onClick={handleClick}>
           or get BTC++ on Uniswap
         </button>
